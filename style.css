@@ -11,7 +11,7 @@ body {
   font-size: 18px;
 }
 
-.header {
+header {
   background-image: url("./images/desktop/image-header.jpg");
   background-size: cover;
   height: 100vh;
@@ -36,6 +36,7 @@ body {
   font-family: "Barlow", sans-serif;
   color: #fff;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .contact-btn {
@@ -48,6 +49,12 @@ body {
   border: none;
   padding: 12px 25px;
   cursor: pointer;
+}
+
+.contact-btn:hover {
+  color: #fff;
+  background-color: #32b1f1;
+  transition: all 0.5s ease-out;
 }
 
 .navbar img {
@@ -66,13 +73,18 @@ body {
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  padding-top: 6rem;
+  padding-top: 9rem;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
 }
 
 .landing {
-  height: 600px;
   display: flex;
-  box-sizing: border-box;
 }
 
 .contents {
@@ -107,11 +119,62 @@ body {
   color: hsl(232, 10%, 55%);
 }
 
-.learn {
+.learn-01 {
   font-family: "Fraunces", serif;
   margin-top: 2rem;
   text-transform: uppercase;
   color: hsl(212, 27%, 19%);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.learn-02 {
+  font-family: "Fraunces", serif;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  color: hsl(212, 27%, 19%);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.learn-01::before {
+  content: "";
+  position: absolute;
+  width: 135px;
+  height: 7px;
+  background: hsl(51, 100%, 49%);
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+  margin-top: 18px;
+}
+
+.learn-01:hover:before,
+.learn-01:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.learn-02::before {
+  content: "";
+  position: absolute;
+  width: 135px;
+  height: 7px;
+  background: hsl(7, 99%, 70%);
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+  margin-top: 18px;
+}
+
+.learn-02:hover:before,
+.learn-02:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .egg {
@@ -183,4 +246,173 @@ body {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   line-height: 28px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10rem;
+}
+
+.testimonials h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: hsl(232, 10%, 55%);
+}
+
+.clients {
+  margin-top: 5rem;
+}
+
+.row-clients {
+  display: flex;
+}
+
+.emily {
+  margin: 3rem;
+  text-align: center;
+}
+
+.emily img {
+  margin-bottom: 4rem;
+  width: 25%;
+  border-radius: 50%;
+}
+
+.emily p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: hsl(213, 9%, 39%);
+  margin-bottom: 4rem;
+  line-height: 30px;
+}
+
+.emily h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.thomas {
+  margin: 3rem;
+  text-align: center;
+}
+
+.thomas img {
+  width: 25%;
+  border-radius: 50%;
+  margin-bottom: 3.5rem;
+}
+
+.thomas p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: hsl(213, 9%, 39%);
+  margin-bottom: 4rem;
+  line-height: 30px;
+}
+
+.thomas h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.jennie {
+  margin: 3rem;
+  text-align: center;
+}
+
+.jennie img {
+  width: 25%;
+  border-radius: 50%;
+  margin-bottom: 4.2rem;
+}
+
+.jennie p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: hsl(213, 9%, 39%);
+  margin-bottom: 4rem;
+  line-height: 30px;
+}
+
+.jennie h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.position {
+  margin-top: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-gallery {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+}
+
+footer {
+  background-color: hsl(168, 58%, 63%);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+
+.logo {
+  padding-bottom: 1rem;
+}
+
+.logo img {
+  width: 25vh;
+}
+
+.footer-section {
+  display: flex;
+}
+
+.footer-section ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.footer-section li {
+  margin: 2rem;
+  color: hsl(167, 40%, 24%);
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.footer-section li:hover {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  transition: ease-in 0.3s;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: 25px;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.social-icons:hover {
+  color: #fff !important;
+  transition: ease-in 0.3s;
 }
