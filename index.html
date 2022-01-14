@@ -11,21 +11,29 @@
     />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
+    <script
+      src="https://kit.fontawesome.com/15bb7c1dd9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
+      <div class="background">
+        <img src="images/desktop/image-header.jpg" alt="" />
+      </div>
       <div class="navbar">
         <img src="images/logo.svg" alt="" />
-        <ul>
-          <li>About</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li><button class="contact-btn">Contact</button></li>
-        </ul>
+        <div class="burger" id="icono">
+          <img src="images/icon-hamburger.svg" alt="" />
+        </div>
+        <div class="links">
+          <ul>
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li><button class="contact-btn">Contact</button></li>
+          </ul>
+        </div>
       </div>
       <div class="content">
         <h1>We are creatives</h1>
@@ -129,12 +137,10 @@
     </div>
 
     <div class="gallery">
-      <div class="row-gallery">
-        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
-        <img src="images/desktop/image-gallery-orange.jpg" alt="" />
-        <img src="images/desktop/image-gallery-cone.jpg" alt="" />
-        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
-      </div>
+      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
+      <img src="images/desktop/image-gallery-orange.jpg" alt="" />
+      <img src="images/desktop/image-gallery-cone.jpg" alt="" />
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
     </div>
 
     <footer>
@@ -149,10 +155,10 @@
         </ul>
       </div>
       <div class="social-icons">
-        <img src="images/icon-facebook.svg" alt="" />
-        <img src="images/icon-instagram.svg" alt="" />
-        <img src="images/icon-twitter.svg" alt="" />
-        <img src="images/icon-pinterest.svg" alt="" />
+        <i class="fa-brands fa-facebook-square"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter-square"></i>
+        <i class="fa-brands fa-pinterest-square"></i>
       </div>
     </footer>
   </body>
