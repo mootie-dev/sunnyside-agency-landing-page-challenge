@@ -21,6 +21,11 @@ header {
   height: 100vh;
 }
 
+.background-landing {
+  position: absolute;
+  width: 100%;
+}
+
 .background img {
   width: 100%;
   height: 100%;
@@ -123,21 +128,57 @@ header {
 .landing-sections {
   font-family: "Barlow", sans-serif;
   width: 50%;
-  height: 87vh;
 }
 
-.row {
+.workspace-sections {
+  font-family: "Barlow", sans-serif;
+  width: 50%;
+  height: 100%;
+}
+
+.egg img {
+  width: 100%;
+  height: 100%;
+}
+
+.cup img {
+  width: 100%;
+}
+
+.row-landing {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
 
-.section-without-bg {
-  margin-top: 12rem;
+.row-landing-02 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.row-workspace {
+  display: flex;
+  height: 80vh;
+}
+
+.section-without-bg-01 {
+  margin-top: 10rem;
   margin-right: 16rem;
   margin-left: 9rem;
 }
 
-.section-without-bg h1 {
+.section-without-bg-01 h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+}
+
+.section-without-bg-02 {
+  margin-top: 10rem;
+  margin-right: 16rem;
+  margin-left: 9rem;
+}
+
+.section-without-bg-02 h1 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   color: hsl(212, 27%, 19%);
@@ -206,54 +247,41 @@ header {
   transform: scaleX(1);
 }
 
-.egg {
-  background-image: url("./images/desktop/image-transform.jpg");
-  width: 100%;
-  height: 100%;
-}
-
-.cup {
-  background-image: url("./images/desktop/image-stand-out.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .cherry {
-  background-image: url("./images/desktop/image-graphic-design.jpg");
-  background-size: cover;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20rem;
-  padding-left: 12rem;
-  padding-right: 12rem;
   text-align: center;
+  position: relative;
+}
+
+.background-landing img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .orange {
-  background-image: url("./images/desktop/image-photography.jpg");
-  background-size: cover;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20rem;
-  padding-left: 12rem;
-  padding-right: 12rem;
   text-align: center;
+  position: relative;
 }
 
 .cherry h2 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   color: hsl(167, 40%, 24%);
-  padding-bottom: 2rem;
+  position: relative;
+  padding-top: 15rem;
+  padding-bottom: 1rem;
 }
 
 .cherry p {
@@ -261,13 +289,18 @@ header {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   line-height: 28px;
+  position: relative;
+  padding-right: 13rem;
+  padding-left: 13rem;
 }
 
 .orange h2 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   color: hsl(198, 62%, 26%);
-  padding-bottom: 2rem;
+  position: relative;
+  padding-top: 15rem;
+  padding-bottom: 1rem;
 }
 
 .orange p {
@@ -275,6 +308,9 @@ header {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   line-height: 28px;
+  position: relative;
+  padding-right: 13rem;
+  padding-left: 13rem;
 }
 
 .testimonials {
@@ -459,6 +495,9 @@ footer {
   }
   navbar {
     width: 100%;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 0rem;
   }
   .links ul {
     display: flex;
@@ -474,13 +513,32 @@ footer {
   }
   .cherry {
     width: 100%;
+    height: 100%;
+  }
+  .cherry p {
+    padding: 0;
+    margin: 0;
+  }
+  .cherry h2 {
+    padding: 0;
+    margin: 0;
   }
   .orange {
     width: 100%;
+    height: 100%;
   }
+  .orange h2 {
+    padding: 0;
+    margin: 0;
+  }
+  .orange p {
+    padding: 0;
+    margin: 0;
+  }
+
   .landing-sections {
     width: 100%;
-    height: 79vh;
+    height: 55vh;
   }
   .testimonials {
     width: 100%;
@@ -494,9 +552,22 @@ footer {
   .clients {
     width: 50%;
   }
-  .row {
+  .row-landing {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
+  }
+
+  .row-landing-02 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row-workspace {
+    display: flex;
+    flex-direction: column;
+  }
+  .workspace-sections {
+    width: 100%;
+    height: 100%;
   }
   .jennie {
     margin: 0;
@@ -527,7 +598,6 @@ footer {
     flex-wrap: wrap;
   }
   .egg {
-    background-size: cover;
     height: 55%;
   }
   .content h1 {
@@ -537,19 +607,35 @@ footer {
   .arrow {
     padding-top: 3rem;
   }
-  .section-without-bg {
-    margin: 1px;
+  .section-without-bg-01 {
+    margin: 15px;
+    text-align: center;
+  }
+  .section-without-bg-02 {
+    margin: 15px;
     text-align: center;
   }
   .background {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 80%;
   }
-
   .background img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+  .background-landing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .background-landing img {
+    height: 100%;
+    width: 100%;
+  }
+  header {
+    height: 80vh;
   }
   /* .burger {
     display: flex;
