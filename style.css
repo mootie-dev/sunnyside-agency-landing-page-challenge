@@ -484,6 +484,7 @@ footer {
   color: #fff;
   transition: 0.6s;
 }
+
 .mobile-nav {
   display: none;
 }
@@ -492,12 +493,33 @@ footer {
   display: none;
 }
 
+footer .attribution {
+  margin-top: 30px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+footer .attribution a {
+  font-size: 1rem;
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  color: hsl(167, 40%, 24%);
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+footer .attribution a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
 @media (max-width: 991px) {
   .gallery img {
     width: 50%;
   }
   footer {
     width: 100%;
+    padding: 3rem;
   }
   .navbar {
     padding-bottom: 2rem;
@@ -714,6 +736,13 @@ footer {
   .content h1 {
     font-size: 25px;
   }
+  footer .attribution {
+    font-size: 0.9rem;
+  }
+
+  footer .attribution a {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 280px) {
@@ -731,5 +760,8 @@ footer {
   }
   .row-workspace {
     height: 170vh;
+  }
+  footer {
+    padding: 2rem 1rem;
   }
 }
